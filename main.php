@@ -22,7 +22,7 @@ for($i=0;$i<10;$i++){
     $apple_tree->type = 'Яблоня';
     $apple_tree->fruits = rand(40,50);
     $apple_tree->weight = rand(150,180);
-    $garden = $apple_tree->to_garden($graden);
+    $garden = $apple_tree->to_garden($garden);
 }
 
 for($i=0; $i<15; $i++){
@@ -33,4 +33,22 @@ for($i=0; $i<15; $i++){
     $pear->weight = rand(130,170);
     $garden = $pear->to_garden($garden);
 }
+
+foreach($garden as $row){
+    $fruits_count+=$row->fruits;
+    if($row->type=='Яблоня'){
+        $apple_count+=$row->fruits;
+        $apples_weight+=$row->weight;
+    }
+    elseif($row->type=='Груша'){
+        $pear_count+=$row->fruits;
+        $pears_weight+=$row->weight;
+    }
+}
+
+echo 'Всего фруктов: '.$fruits_count.PHP_EOL;
+echo 'Количество яблок: '.$apple_count.PHP_EOL;
+echo 'Количество груш: '.$pear_count.PHP_EOL;
+echo 'Общий вес яблок: '.$apples_weight.PHP_EOL;
+echo 'Общий вес груш: '.$pears_weight;
 ?>
