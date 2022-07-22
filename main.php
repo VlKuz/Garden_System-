@@ -21,7 +21,9 @@ for($i=0;$i<10;$i++){
     $apple_tree->id = uniqid();
     $apple_tree->type = 'Яблоня';
     $apple_tree->fruits = rand(40,50);
-    $apple_tree->weight = rand(150,180);
+    $num_of_apples=$apple_tree->fruits;
+    for($j = 0;$j<$num_of_apples;$j++)
+        $apple_tree->weight+=rand(150,180);
     $garden = $apple_tree->to_garden($garden);
 }
 
@@ -30,7 +32,8 @@ for($i=0; $i<15; $i++){
     $pear->id = uniqid();
     $pear->type = 'Груша';
     $pear->fruits = rand(0,20);
-    $pear->weight = rand(130,170);
+    for($j = 0;$j<$num_of_apples;$j++)
+        $pear->weight+=rand(130,170);
     $garden = $pear->to_garden($garden);
 }
 
