@@ -7,6 +7,11 @@ class Tree
         array_push($arr, $this);
         return $arr;
     }
+
+    function weight_counting($num1, $num2){//Метод класса для подсчета общего веса фруктов на одном дереве.
+        for($i = 0;$i<$this->fruits;$i++)
+            $this->weight+=rand($num1,$num2);
+    }
 }
 
 $garden = array(); //Массив "Сад"
@@ -21,9 +26,7 @@ for($i=0;$i<10;$i++){
     $apple_tree->id = uniqid();//Уникальный id
     $apple_tree->type = 'Яблоня';//Тип дерева
     $apple_tree->fruits = rand(40,50);//Количество фруктов на одном дереве
-    $num_of_apples=$apple_tree->fruits;
-    for($j = 0;$j<$num_of_apples;$j++)//Цикл для высчитывания всех фруктов на одном дереве
-        $apple_tree->weight+=rand(150,180);//Подсчет веса всех фруктов на одном дереве
+    $apple_tree->weight_counting(150,180);
     $garden = $apple_tree->to_garden($garden);
 }
 
@@ -32,9 +35,7 @@ for($i=0; $i<15; $i++){
     $pear->id = uniqid();
     $pear->type = 'Груша';
     $pear->fruits = rand(0,20);
-    $num_of_pears=$pear->fruits;
-    for($j = 0;$j<$num_of_pears;$j++)
-        $pear->weight+=rand(130,170);
+    $pear->weight_counting(130,170);
     $garden = $pear->to_garden($garden);
 }
 
