@@ -1,18 +1,8 @@
 <?php
-class Tree
-{
-    public $id, $type, $fruits, $weight;
 
-    function to_garden($arr){//Метод класса для добавления объектов в массив "Сад"
-        array_push($arr, $this);
-        return $arr;
-    }
+namespace App;
 
-    function weight_counting($num1, $num2){//Метод класса для подсчета общего веса фруктов на одном дереве.
-        for($i = 0;$i<$this->fruits;$i++)
-            $this->weight+=rand($num1,$num2);
-    }
-}
+require_once "Tree.php";
 
 $garden = array(); //Массив "Сад"
 $fruits_count = 0; //Общее количество фруктов
