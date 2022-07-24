@@ -11,7 +11,7 @@ $apples_weight = 0; //Общий вес яблок
 $pear_count = 0; //Количество груш
 $pears_weight = 0; //Общий вес груш
 
-for($i=0;$i<10;$i++){
+for($i=0;$i<10;$i++) {
     $apple_tree = new Tree(); //Создания объекта класса Tree
     $apple_tree->id = uniqid();//Уникальный id
     $apple_tree->type = 'Яблоня';//Тип дерева
@@ -20,7 +20,7 @@ for($i=0;$i<10;$i++){
     $garden = $apple_tree->to_garden($garden);
 }
 
-for($i=0; $i<15; $i++){
+for($i=0; $i<15; $i++) {
     $pear = new Tree();
     $pear->id = uniqid();
     $pear->type = 'Груша';
@@ -29,13 +29,13 @@ for($i=0; $i<15; $i++){
     $garden = $pear->to_garden($garden);
 }
 
-foreach($garden as $row){
+foreach($garden as $row) {
     $fruits_count+=$row->fruits;//Подсчет общего количества фруктов
     if($row->type=='Яблоня'){
         $apple_count+=$row->fruits;//Подсчет количества всех яблок
         $apples_weight+=$row->weight;//Подсчет общего веса яблок
     }
-    elseif($row->type=='Груша'){
+    elseif($row->type=='Груша') {
         $pear_count+=$row->fruits;//Подсчет количества всех груш
         $pears_weight+=$row->weight;//Подсчет общего веса груш
     }
