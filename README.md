@@ -1,2 +1,4 @@
 # Garden_System 
-Garden_System. This system counts the number of all fruits in the garden
+Garden_System.
+Эта программа подсчитывает количество всех фруктов в саду, и выводит кол-во собранных фруктов каждого вида.
+Файл main.php находится в папке app.
