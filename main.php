@@ -23,7 +23,7 @@ for($i=0;$i<10;$i++){
     $apple_tree->fruits = rand(40,50);//Количество фруктов на одном дереве
     $num_of_apples=$apple_tree->fruits;
     for($j = 0;$j<$num_of_apples;$j++)//Цикл для высчитывания всех фруктов на одном дереве
-        $apple_tree->weight+=rand(150,180);
+        $apple_tree->weight+=rand(150,180);//Подсчет веса всех фруктов на одном дереве
     $garden = $apple_tree->to_garden($garden);
 }
 
