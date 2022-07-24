@@ -51,7 +51,7 @@ foreach($garden as $row){
     }
 }
 
-echo 'Всего фруктов: '.$fruits_count.PHP_EOL;
+//echo 'Всего фруктов: '.$fruits_count.PHP_EOL;
 echo 'Количество яблок: '.$apple_count.PHP_EOL;
 echo 'Количество груш: '.$pear_count.PHP_EOL;
 echo 'Общий вес яблок: '.$apples_weight.PHP_EOL;
