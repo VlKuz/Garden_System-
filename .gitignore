@@ -1,2 +1,3 @@
 # ignore .cache
 *.cache
+/vendor
