@@ -1,4 +1,3 @@
 # Garden_System 
 Garden_System.
-Эта программа подсчитывает количество всех фруктов в саду, и выводит кол-во собранных фруктов каждого вида.
-Файл main.php находится в папке app.
+This program counts the number of all fruits in the orchard, and outputs the number of fruits of each type harvested.
